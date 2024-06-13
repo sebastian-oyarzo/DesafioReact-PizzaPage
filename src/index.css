@@ -1,0 +1,128 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+/* referente al navdar: */
+.navdar {
+    background-color: #17a2b8;
+    color: #fff;
+    padding: 0px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 8vh;
+}
+
+.startNavdar{
+    display: flex;
+    gap: 10px;
+}
+
+.endNavdar {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 10px;
+}
+
+.ico {
+    max-width: 20px;
+}
+
+/* referente a home: */
+.pizzaHome {
+    width: 100%;
+    height: 20vh;
+    position: relative;
+    background-size: cover;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.imgsPizzaHome {
+    width: 100%;
+    filter: brightness(40%);
+}
+
+.onImg {
+    position: absolute;
+    color: #fff;
+    align-items: center;
+    text-align: center;
+}
+
+ /* referente al main de home : */
+.main {
+    padding: 3%;
+    overflow: auto;
+    display: inline-flex;
+    gap: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    white-space: nowrap;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 250px;
+    border: 1px solid #ececec;
+    margin: 0px 1%;
+}
+
+.imgCard {
+    width: 250px;
+}
+
+.boxIngredients {
+    margin-bottom: 20px;
+}
+
+.ingredientes {
+    display: flex;
+    padding-left: 20px;
+}
+
+h3 {
+    padding: 10px;
+    border-bottom: 1px solid #ececec;
+}
+
+h5 {
+    padding: 7px;
+}
+.ingrediente {
+    padding-left: 5px;
+    gap: 20px;
+}
+
+.price {
+    text-align: center;
+    border-top: 1px solid #ececec;
+    padding: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 4%;
+}
+
+button {
+    padding: 7px 20px;
+    border-radius: 5px;
+    color: #ececec;
+    font-size: medium;
+    display: flex;
+    gap: 5px;
+}
+
+.verMas {
+    background-color: #00c0dd;
+}
+
+.añadir {
+    background-color: #ff2c2c;
+}
