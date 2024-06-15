@@ -126,3 +126,31 @@ button {
 .añadir {
     background-color: #ff2c2c;
 }
+
+
+/* referente a la viwe de Detalle Pizza */
+
+.DetallePizza {
+    display: flex;
+    padding: 5% 10%;
+}
+
+.imgDetalle {
+    max-width: 35%;
+    margin-right: 20px;
+}
+
+.id {
+    padding-bottom: 2%;
+    border-bottom: solid 1px #d1d1d1;
+}
+
+.Description {
+    padding-top: 2%;
+}
+
+.endDetalle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
