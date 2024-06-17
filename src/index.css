@@ -1,6 +1,7 @@
 * {
     padding: 0%;
     margin: 0%;
+    font-family: sans-serif, Verdana, Geneva, Tahoma;
 }
 
 /* referente al navdar: */
@@ -54,7 +55,7 @@
     text-align: center;
 }
 
- /* referente al main de home : */
+ /* referente a la view de home : */
 .main {
     padding: 3%;
     overflow: auto;
@@ -111,16 +112,16 @@ h5 {
 }
 
 button {
-    padding: 7px 20px;
+    padding: 7px 10px;
     border-radius: 5px;
     color: #ececec;
     font-size: medium;
     display: flex;
-    gap: 5px;
 }
 
 .verMas {
     background-color: #00c0dd;
+    max-width: 40%;
 }
 
 .añadir {
@@ -128,7 +129,7 @@ button {
 }
 
 
-/* referente a la viwe de Detalle Pizza */
+/* referente a la view de Detalle Pizza */
 
 .DetallePizza {
     display: flex;
@@ -153,4 +154,65 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+/* referente a la view de Carrito */
+
+.Carrito {
+    padding: 5% 17%;
+}
+
+.font {
+    font-size: 25px;
+}
+
+.startCarrito , .endCarrito , .mainCarrito {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 5px;
+}
+
+.mainCarrito {
+    display: flex;
+    border-bottom: solid 1px #cacaca;
+}
+.imgMini {
+    max-width: 7%;
+    padding: 5px;
+}
+
+.Total {
+    margin: 20px 0px;
+}
+
+.resta {
+    background-color: #ff2c2c;
+}
+
+.suma {
+    background-color: #2c2cff;
+}
+
+.precioMin {
+    color: #006d00;
+}
+
+.pagar {
+    background-color: #198754;
+}
+
+/* referente a si la ruta de pizza/ es invalida si es que se accede directo desde la url */
+.invalidaRuta {
+    display: flex;
+    padding: 10% 20%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.danger {
+    background-color: #ff2c2c;
+    max-width: 20%;
 }

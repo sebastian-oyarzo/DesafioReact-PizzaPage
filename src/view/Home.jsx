@@ -8,12 +8,8 @@ import EyesIcon from '../imgs/Eyes-favicon-16x16.png'
 
 export const Home = () => {
 
-  const { pizzas , Precio , setPrecio } = useContext(Context)
+  const { pizzas , handlePrecio , Mayuscula , PuntoDecimal } = useContext(Context)
   const Navigate = useNavigate()
-
-    const handlePrecio = (AddPrecio) => {
-      setPrecio(AddPrecio + Precio)
-    }
 
     const handleClick = (PizzaName) => {
       Navigate('/pizza/' + PizzaName)
@@ -32,8 +28,8 @@ export const Home = () => {
          { pizzas.length ? pizzas.map((pizzaCard, key) => (
           <div key={key} className='card'>
             <img className='imgCard' src={pizzaCard.img} alt="imagen de pizza" />
-            <h3 >{pizzaCard.name}</h3>
-            <h5>ingredientes: </h5>
+            <h3 >{Mayuscula(pizzaCard.name)}</h3>
+            <h5>Ingredientes: </h5>
             <div className='boxIngredients'>
               {pizzaCard.ingredients.map((ingrediente , key) => (
                 <div className='ingredientes' key={key}>
@@ -43,10 +39,10 @@ export const Home = () => {
                 ))
               }
             </div>
-              <h2 className='price'>$ {pizzaCard.price} </h2>
+              <h2 className='price'>$ {PuntoDecimal(pizzaCard.price)} </h2>
               <div className='buttons'>
                 <button onClick={() => handleClick(pizzaCard.name)} className='verMas'> ver mas<img src={EyesIcon} alt="imagen de 2 ojos" /></button>
-                <button onClick={() => handlePrecio(pizzaCard.price)} className='añadir'>añadir<img src={ShoppingIcon} alt="imagen de carro de compras" /></button>
+                <button  onClick={() => handlePrecio(pizzaCard.price , pizzaCard.img , pizzaCard.name, +1)} className='añadir'>añadir<img src={ShoppingIcon} alt="imagen de carro de compras" /></button>
               </div>
           </div>
         ))
