@@ -22,12 +22,12 @@ const ContextProvider = ({ children }) => {
 // data de las pizzas que se iran añadiendo:
     const [AddCarrito, setAddCarrito] = useState([])
 
-    const handlePrecio = (AddPrecio , AddImg , AddName , cantidad) => {
+    const handlePrecio = (AddPrecio , AddImg , AddName , cantidad ) => {
+      setAddCarrito(AddCarrito.filter(item => item.AddPrecio != 0 || item.cantidad != 0))
       setPrecio(AddPrecio + Precio)
       setAddCarrito( (prevItems) => {
         const existingItem = prevItems.find(item => item.AddName === AddName);
-
-        if(existingItem){
+        if(existingItem ){
         return prevItems.map(item =>
           item.AddName === AddName?
            { ...item,  cantidad: item.cantidad + cantidad , AddPrecio : item.AddPrecio + AddPrecio  }
